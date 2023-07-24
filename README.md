@@ -19,4 +19,25 @@ hug("Hello there")
 
 Get your `hf-chat` and `token` value from cookies and your'e good to go.
 
+# 🤔 How to use executables?
+
+First of all set the environment variables as below:
+
+### Windows:
+- Downlaod `hug_win.exe` file from the release page.
+- Get the `token` and `hf-chat` from cookies panel and use them as follows.
+
+```bat
+set TOKEN=YOUR_TOKEN_HERE
+set HFCHAT=YOUR_HFCHAT_HERE
+```
+### Linux and MacOS:
+- Downlaod `hug_linux` or `hug_mac` file from the release page.
+- Get the `token` and `hf-chat` from cookies panel and use them as follows.
+
+```sh
+export TOKEN="YOUR_TOKEN_HERE"
+export HFCHAT="YOUR_HFCHAT_HERE"
+```
+<br>
 Note: Unofficial and reverse engineered Huggingface API. This software cannot be used for any unlawful activities and commercial purpose.
