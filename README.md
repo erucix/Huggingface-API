@@ -21,6 +21,8 @@ Get your `hf-chat` and `token` value from cookies and your'e good to go.
 
 # 🤔 How to use executables?
 
+<img src="https://github.com/erucix/Huggingface-API/blob/main/img/Screenshot%20from%202023-07-24%2022-12-39.png?raw=true" height="240px">
+
 First of all set the environment variables as below:
 
 ### Windows:
