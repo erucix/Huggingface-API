@@ -7,8 +7,8 @@ const cookie = `token=${token}; hf-chat=${hfchat}`
 
 function hug(msg) {
     return new Promise(async (resolve) => {
-        if (!token) return "Huggingface token not provided"
-        if (!hfchat) return "hfchat not provided"
+        if (!token) resolve("Huggingface token not provided. See the ReadMe in github")
+        if (!hfchat) resolve("hfchat not provided. See the ReadMe in github")
 
         let data = process.env.CONV ? { "conversationId": process.env.CONV } : await newConversationId().then(data => data)
 

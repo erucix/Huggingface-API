@@ -13,8 +13,8 @@ const cookie = `token=${token}; hf-chat=${hfchat}`
 
 function hug(msg) {
     return new Promise(async (resolve) => {
-        if (!token) return "Huggingface token not provided"
-        if (!hfchat) return "hfchat not provided"
+        if (!token) resolve("Huggingface token not provided. See the github readme")
+        if (!hfchat) resolve("hfchat not provided. See the github readme")
 
         let data = process.env.CONV ? { "conversationId": process.env.CONV } : await newConversationId().then(data => data)
 
@@ -79,9 +79,9 @@ function newConversationId() {
     })
 }
 function ask() {
-    rl.question("You: > ", (msg) => {
+    rl.question("\033[35mYou: \033[34m> \033[36m", (msg) => {
         hug(msg).then(data => {
-            console.log("😊 : " + data)
+            console.log("😊 : \033[34m" + data)
             ask()
         })
     })
